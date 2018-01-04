@@ -1,9 +1,25 @@
-var num = 125;
-if (num % 2 == 0 ){
-	window.alert(num + 'は偶数です');
-}else{
-	window.alert(num + 'は奇数です');
+for (var i = 0; i < 10 ; i++){
+	document.write(i + '<br>');
 }
+
+
+// var point = 3;
+// switch(point) {
+// 	case 1 :
+// 	case 2 :
+// 		window.alert('1または2ですね。残念！');
+// 		break;
+// 	case 3 :
+// 		window.alert('おめでとうございます！');
+// 		break;
+// 	default:
+// 		window.alert('1~3以外のポイントは無効です。')
+// 		break;
+// }
+
+
+// 
+
 
 
 // var a, b, c;
