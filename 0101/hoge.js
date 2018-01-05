@@ -1,6 +1,41 @@
-for (var i = 0; i < 10 ; i++){
-	document.write(i + '<br>');
+var i = -1, num = 0;
+// num += i;
+// window.alert(num);
+
+do{
+	num += i;
+	document.write(num + ' ');
+	i++;
 }
+while(i < 5);
+
+// i =0;
+// while (++i < 10){
+// 	document.write(i + '　')
+// }
+
+
+// for(var i = 0; i < 5; i++){
+// 	document.write(i);
+// }
+
+// var i =0;
+// while (i < 5){
+// 	document.write(i);
+// 	i++;
+// }
+
+// var num = 100;
+// var i = 1;
+// while (i <= num) {
+// 	document.write(i);
+// 	document.write(' ');
+// 	i++;
+// }
+
+// for (var i = 0; i < 10 ; i++){
+// 	document.write(i + '<br>');
+// }
 
 
 // var point = 3;
