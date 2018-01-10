@@ -1,13 +1,116 @@
-var i = -1, num = 0;
-// num += i;
-// window.alert(num);
+// window.onload = function(){
+// 	document.getElementById("wrp").onclick = function(){
+// 		window.alert('ボタンが押されました');
+// 	};
+// };
 
-do{
-	num += i;
-	document.write(num + ' ');
-	i++;
-}
-while(i < 5);
+
+
+
+(window.onload = function(){
+
+	////////HTML読み終わったかテスト
+	window.alert("読んだったで");
+	////////
+
+	////////<div id="btn_wrp">の中の<button>タグを見つけられてるかテスト
+	var wrp =document.getElementById("wrp"); //Element"s"にして失敗した
+	var btn =wrp.getElementsByTagName('button');
+	var num = btn.length;
+	window.alert('buttonタグが' + num + '個見つかりました！');
+	////////
+
+
+
+
+	// btn[0].onclick = function(){
+	// 	window.alert('ボタンが押されました');
+	// }
+	// btn[1].onclick = function(){
+	// 	window.alert('押すなと言ったのに');
+	// }
+
+
+	var prg =wrp.getElementsByTagName('p');
+	var num = prg.length;
+	window.alert('pタグが' + num + '個見つかりました！');
+
+
+	// for(var i=0 ; i<=1 ; i++){
+
+	// 	if(i==0){
+	// 		btn[i].onclick =function(){
+	// 			prg[0].innerHTML='ボタンが押されました';
+	// 		};
+	// 	}else if(i==1){
+	// 		btn[i].onclick =function(){
+	// 			window.alert('押すなと言ったのに');
+	// 		};
+	// 	};
+
+	// };
+
+
+	var kaisu = 0;
+	btn[0].onclick = function(){
+		if(kaisu<=100){
+			check3baisu();
+			// prg[0].innerHTML= ++kaisu;
+		}else if(kaisu<11){
+			prg[0].innerHTML= '押しすぎ！！！！';
+		}
+	}
+
+
+
+	////////
+	function check3baisu(){
+		// for
+		//  (i = 1; i<= 100; i++){
+			var i=kaisu++;
+
+			if(i==0){
+				prg[0].innerHTML= i;
+
+			}else if( i%3 == 0){
+				prg[0].innerHTML= i+'は３の倍数です';
+
+			}else{
+				prg[0].innerHTML= i;
+			}
+		// }
+	};
+	////////
+
+
+});
+
+
+
+
+
+
+
+/////////////3の倍数か調べるのは・・・num%3 == 0
+// var num = 4;
+// if(num%3 == 0){
+// 	document.write('３の倍数です');
+// }else{
+// 	document.write('３の倍数では無いです');
+// }
+//////////////////////////////////////////
+
+
+// var i = -1, num = 0;
+// // num += i;
+// // window.alert(num);
+
+// do{
+// 	num += i;
+// 	document.write(num + ' ');
+// 	i++;
+// }
+// while(i < 0);
 
 // i =0;
 // while (++i < 10){
