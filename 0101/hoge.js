@@ -50,11 +50,12 @@
 	// 	};
 
 	// };
-
+var nabeatsu = '<img src="aho0.jpg">';
+var sakata = '<img class="sakata" src="aho1.jpg">';
 
 
 	btn[1].onclick = function(){
-	 			window.alert('押すな!!!!!');
+	 			window.alert('1/10の確率で師匠が出ます。');
 	 		};
 
 
@@ -63,10 +64,12 @@
 		if(kaisu<=100){
 			check3baisu();
 			// rslt.innerHTML= ++kaisu;
-		}else if(kaisu<11){
+		}else if(kaisu<101){
 			rslt.innerHTML= '押しすぎ！！！！';
 		}
 	}
+
+
 
 
 
@@ -74,13 +77,21 @@
 	function check3baisu(){
 		// for
 		//  (i = 1; i<= 100; i++){
+
+
+
 			var i=kaisu++;
 
 			if(i==0){
 				rslt.innerHTML= i;
 
 			}else if( i%3 == 0){
-				rslt.innerHTML= i+'!!<br>'+'<img src="nabeatsu.jpg">';
+
+				var ahonum = Math.floor( Math.random() * 11 );
+				if(ahonum<10){var ahoimg = nabeatsu;}
+				if(ahonum==10){var ahoimg = sakata;}
+				rslt.innerHTML= i+'!!<br>'+ ahoimg;
+
 
 			}else{
 				rslt.innerHTML= i;
@@ -88,6 +99,18 @@
 		// }
 	};
 	////////
+
+	////////
+	// function ahorandom(){
+	// 	var ahonum = Math.floor( Math.random() * 11 );
+	// 	if(ahonum<10){var ahoimg = nabeatsu;}
+	// 	if(ahonum==10){var ahoimg = sakata;}
+	// 	rslt.innerHTML= i+'!!<br>'+ ahoimg;
+	// }
+
+
+	////////
+
 
 
 });
