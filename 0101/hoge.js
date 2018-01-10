@@ -5,12 +5,10 @@
 // };
 
 
-
-
 (window.onload = function(){
 
 	////////HTML読み終わったかテスト
-	window.alert("読んだったで");
+	window.alert("HTMLを読み込みました");
 	////////
 
 	////////<div id="btn_wrp">の中の<button>タグを見つけられてるかテスト
@@ -30,17 +28,20 @@
 	// 	window.alert('押すなと言ったのに');
 	// }
 
+	////////
+	var rsltTag =wrp.getElementsByClassName('result');
+	var num = rsltTag.length;
+	window.alert('resultのクラス名をもつタグが' + num + '個見つかりました！');
+	////////
+	var rslt =rsltTag[0]
 
-	var prg =wrp.getElementsByTagName('p');
-	var num = prg.length;
-	window.alert('pタグが' + num + '個見つかりました！');
 
 
 	// for(var i=0 ; i<=1 ; i++){
 
 	// 	if(i==0){
 	// 		btn[i].onclick =function(){
-	// 			prg[0].innerHTML='ボタンが押されました';
+	// 			rslt.innerHTML='ボタンが押されました';
 	// 		};
 	// 	}else if(i==1){
 	// 		btn[i].onclick =function(){
@@ -51,13 +52,19 @@
 	// };
 
 
+
+	btn[1].onclick = function(){
+	 			window.alert('押すな!!!!!');
+	 		};
+
+
 	var kaisu = 0;
 	btn[0].onclick = function(){
 		if(kaisu<=100){
 			check3baisu();
-			// prg[0].innerHTML= ++kaisu;
+			// rslt.innerHTML= ++kaisu;
 		}else if(kaisu<11){
-			prg[0].innerHTML= '押しすぎ！！！！';
+			rslt.innerHTML= '押しすぎ！！！！';
 		}
 	}
 
@@ -70,13 +77,13 @@
 			var i=kaisu++;
 
 			if(i==0){
-				prg[0].innerHTML= i;
+				rslt.innerHTML= i;
 
 			}else if( i%3 == 0){
-				prg[0].innerHTML= i+'は３の倍数です';
+				rslt.innerHTML= i+'!!<br>'+'<img src="nabeatsu.jpg">';
 
 			}else{
-				prg[0].innerHTML= i;
+				rslt.innerHTML= i;
 			}
 		// }
 	};
@@ -86,7 +93,7 @@
 });
 
 
-
+///////////////////////////////////////////////////////////////////////
 
 
 
